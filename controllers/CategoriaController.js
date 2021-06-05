@@ -13,7 +13,7 @@ const CategoriaController = {
 
         const categoria = await Categoria.findOne({
             where: {
-                index
+                id
             },
             include: {
                 model: Filme,
