@@ -1,4 +1,3 @@
-const { Sequelize } = require("sequelize/types");
 const Categoria = require('./Categoria')
 
 module.exports = (sequelize, DataType) => {

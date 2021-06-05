@@ -1,5 +1,3 @@
-const { Sequelize } = require("sequelize/types");
-
 module.exports = (sequelize, DataType) => {
     const Categoria = sequelize.define('Categoria', {
         id: {
