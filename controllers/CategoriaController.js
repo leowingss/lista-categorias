@@ -7,6 +7,22 @@ const CategoriaController = {
         return res.render('categorias', {
             categorias
         })
+    },
+    showFilms: async(req, res) => {
+        const { id } = req.params
+
+        const categoria = await Categoria.findOne({
+            where: {
+                index
+            },
+            include: {
+                model: Filme,
+                as: 'filmes',
+                required: true
+            }
+        })
+
+        return res.render('filmesCategorias', { categoria })
     }
 }
 
