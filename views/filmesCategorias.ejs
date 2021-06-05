@@ -9,7 +9,30 @@
 </head>
 
 <body>
-
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Ver Sinopse</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% categoria.filmes.forEach(filme =>{ %>
+                <tr>
+                    <th scope="row">
+                        <%= filme.id %>
+                    </th>
+                    <th>
+                        <%= filme.nome %>
+                    </th>
+                    <th>
+                        <a href="#" class="btn btn-primary">Sinopse</a>
+                    </th>
+                </tr>
+                <% })%>
+        </tbody>
+    </table>
 </body>
 
-</html>m
+</html>
