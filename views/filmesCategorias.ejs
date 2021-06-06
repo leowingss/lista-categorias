@@ -8,13 +8,20 @@
     <title>Filmes - Categorias</title>
 </head>
 
-<body>
+<body class="p-3 mb-2 bg-dark text-white">
+    <div>
+        <h1>
+            Filmes da categoria:
+            <%= categoria.nome %>
+        </h1>
+    </div>
     <table class="table table-dark table-hover">
         <thead>
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Ver Sinopse</th>
+                <th scope="col">Sinopse</th>
+                <th scope="col">Duração</th>
             </tr>
         </thead>
         <tbody>
@@ -27,12 +34,17 @@
                         <%= filme.nome %>
                     </th>
                     <th>
-                        <a href="#" class="btn btn-primary">Sinopse</a>
+                        <%= filme.sinopse %>
                     </th>
+                    <th>
+                        <%= filme.duracao %>
+                    </th>
+
                 </tr>
                 <% })%>
         </tbody>
     </table>
+    <a href="/categoria" class="btn btn-secondary">Início</a>
 </body>
 
 </html>

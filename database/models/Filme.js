@@ -9,6 +9,7 @@ module.exports = (sequelize, DataType) => {
         },
         nome: DataType.STRING,
         sinopse: DataType.STRING,
+        duracao: DataType.TIME,
         fk_categoria: DataType.INTEGER
     }, {
         tableName: 'filmes',
